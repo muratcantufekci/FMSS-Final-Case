@@ -2,16 +2,18 @@ import React, { useState } from 'react'
 import { useShip } from '../context/ShipContext'
 
 const SearchBar = () => {
-    const { setSearchShipValue } = useShip()
+    const { setShipList } = useShip()
     const [inputValue, setInputValue] = useState('')
+    const copyShiplist = JSON.parse(localStorage.getItem('ships'))
 
     const inputChangeHandler = (e) => { // her input girildiğinde değerin atamasını yapar
         setInputValue(e.currentTarget.value)
     }
 
-    const submitHandler = (e) => { // kullanıcı submit ettiğinde context üzerine kitap adını gönderir ve girilmiş değeri sıfırlar
+    const submitHandler = (e) => {
         e.preventDefault()
-        setSearchShipValue(inputValue)
+        const filteredShips = copyShiplist.filter(item => item.name.toLowerCase().includes(inputValue) || item.model.toLowerCase().includes(inputValue))
+        setShipList(filteredShips)
         setInputValue('')
     }
 

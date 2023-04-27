@@ -14,6 +14,7 @@ body {
   font-family: 'Rubik', sans-serif;
   background-image: url('./images/sky2.jpg');
   background-repeat: round;
+  background-size: contain;
 }
 
 code {

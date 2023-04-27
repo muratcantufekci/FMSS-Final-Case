@@ -5,11 +5,11 @@ import Ships from '../../components/Ships'
 
 const Home = () => {
   return (
-    <>
-        <Header />
-        <SearchBar />
-        <Ships />
-    </>
+    <div className="min-h-screen pb-12">
+      <Header />
+      <SearchBar />
+      <Ships />
+    </div>
   )
 }
 
