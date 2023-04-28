@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// Every ship component that takes props and prints it
 const Ship = ({ name, model, rating, img, url, id }) => {
     const clickHandler = () => {
-        localStorage.setItem('detail-url', url)
+        localStorage.setItem('detail-url', url) // sets detail page api url to localstorage
     }
     return (
         <Link to={`/ship/${id}`} className='group/item bg-white rounded-lg flex flex-col gap-3 items-center justify-between transition-all duration-1000 hover:translate-y-negative10 overflow-hidden' onClick={clickHandler}>

@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../images/starwars-logo.png'
 
+//Header component that returns logo
 const Header = () => {
   return (
     <div className='flex items-center justify-center'>
