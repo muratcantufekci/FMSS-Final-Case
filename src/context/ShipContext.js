@@ -3,7 +3,7 @@ import { getShips } from "../services/getShips";
 
 const ShipContext = new createContext();
 
-//Context oluşturarak dataya tüm componentlerden erişim sağlar
+// provides access to data from all components by creating context
 export const ShipProvider = ({ children }) => {
     const [shipList, setShipList] = useState([]);
     const [shipsNextPage, setShipsNextPage] = useState('');
